@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-arena-50 text-slate-800 antialiased;
+  }
+  /* Foco visible y consistente en todos los navegadores */
+  :focus-visible {
+    @apply outline-none ring-2 ring-atardecer-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  .boton-primario {
+    @apply inline-flex items-center justify-center rounded-lg bg-oceano-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-oceano-800 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .boton-secundario {
+    @apply inline-flex items-center justify-center rounded-lg border border-oceano-700 px-4 py-2 text-sm font-semibold text-oceano-700 transition hover:bg-oceano-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .tarjeta {
+    @apply rounded-2xl border border-arena-200 bg-white shadow-sm;
+  }
+  .campo {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-oceano-500;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "viajes-karla-santigut-pfy2202",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Agencia de viajes en React: destinos por REST y vuelos/hoteles por GraphQL, ambos con backend mock (MSW).",
+  "type": "module",
+  "homepage": "https://kbsg01.github.io/viajes-karla-santigut-PFY2202/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "playwright test",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@apollo/client": "^4.3.8",
+    "graphql": "^16.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "autoprefixer": "^10.6.2",
+    "gh-pages": "^6.3.0",
+    "msw": "^2.0.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "vite": "^7.3.7"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
