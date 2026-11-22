@@ -6,7 +6,6 @@ disponibilidad de vuelos y hoteles por **GraphQL** (Apollo Client). La navegaci�
 con rutas anidadas y el diseño es responsive con **Tailwind CSS**.
 
 - Asignatura: PFY2202 — Desarrollo Fullstack II
-- Sitio publicado: https://kbsg01.github.io/viajes-PFY2202/ (se publica con `npm run deploy`)
 
 ## Requisitos de la actividad y dónde se cumplen
 
