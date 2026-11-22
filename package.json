@@ -1,10 +1,10 @@
 {
-  "name": "viajes-karla-santigut-pfy2202",
+  "name": "viajes-pfy2202",
   "private": true,
   "version": "1.0.0",
   "description": "Agencia de viajes en React: destinos por REST y vuelos/hoteles por GraphQL, ambos con backend mock (MSW).",
   "type": "module",
-  "homepage": "https://kbsg01.github.io/viajes-karla-santigut-PFY2202/",
+  "homepage": "https://kbsg01.github.io/viajes-PFY2202/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

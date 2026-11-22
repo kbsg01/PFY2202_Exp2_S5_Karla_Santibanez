@@ -1,0 +1,25 @@
+﻿Ejecución: 21-11-2026, Windows 11, Chromium 153.0.8010.12 · Firefox 155.0 · WebKit 26.6
+
+Running 20 tests using 1 worker
+  ok  1 [chromium] › tests\e2e\viajes.spec.js:13:1 › lista destinos por REST y filtra por región (1.5s)
+  ok  2 [chromium] › tests\e2e\viajes.spec.js:22:1 › detalle con rutas anidadas: vuelos y hoteles por GraphQL (1.9s)
+  ok  3 [chromium] › tests\e2e\viajes.spec.js:33:1 › arma un viaje, calcula el total y confirma la reserva (mutación) (3.4s)
+  ok  4 [chromium] › tests\e2e\viajes.spec.js:51:1 › muestra error y permite reintentar cuando falla el servidor (2.3s)
+  ok  5 [chromium] › tests\e2e\viajes.spec.js:64:1 › ruta inexistente muestra la página 404 (308ms)
+  ok  6 [firefox] › tests\e2e\viajes.spec.js:13:1 › lista destinos por REST y filtra por región (3.5s)
+  ok  7 [firefox] › tests\e2e\viajes.spec.js:22:1 › detalle con rutas anidadas: vuelos y hoteles por GraphQL (2.5s)
+  ok  8 [firefox] › tests\e2e\viajes.spec.js:33:1 › arma un viaje, calcula el total y confirma la reserva (mutación) (4.4s)
+  ok  9 [firefox] › tests\e2e\viajes.spec.js:51:1 › muestra error y permite reintentar cuando falla el servidor (3.0s)
+  ok 10 [firefox] › tests\e2e\viajes.spec.js:64:1 › ruta inexistente muestra la página 404 (901ms)
+  ok 11 [webkit] › tests\e2e\viajes.spec.js:13:1 › lista destinos por REST y filtra por región (2.6s)
+  ok 12 [webkit] › tests\e2e\viajes.spec.js:22:1 › detalle con rutas anidadas: vuelos y hoteles por GraphQL (2.8s)
+  ok 13 [webkit] › tests\e2e\viajes.spec.js:33:1 › arma un viaje, calcula el total y confirma la reserva (mutación) (5.2s)
+  ok 14 [webkit] › tests\e2e\viajes.spec.js:51:1 › muestra error y permite reintentar cuando falla el servidor (3.5s)
+  ok 15 [webkit] › tests\e2e\viajes.spec.js:64:1 › ruta inexistente muestra la página 404 (931ms)
+  ok 16 [movil-chromium] › tests\e2e\viajes.spec.js:13:1 › lista destinos por REST y filtra por región (1.4s)
+  ok 17 [movil-chromium] › tests\e2e\viajes.spec.js:22:1 › detalle con rutas anidadas: vuelos y hoteles por GraphQL (2.0s)
+  ok 18 [movil-chromium] › tests\e2e\viajes.spec.js:33:1 › arma un viaje, calcula el total y confirma la reserva (mutación) (4.1s)
+  ok 19 [movil-chromium] › tests\e2e\viajes.spec.js:51:1 › muestra error y permite reintentar cuando falla el servidor (3.0s)
+  ok 20 [movil-chromium] › tests\e2e\viajes.spec.js:64:1 › ruta inexistente muestra la página 404 (469ms)
+  20 passed (1.2m)
+To open last HTML report run:

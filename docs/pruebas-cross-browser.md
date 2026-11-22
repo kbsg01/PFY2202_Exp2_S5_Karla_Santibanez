@@ -23,22 +23,34 @@
 | 4 | Error del servidor y reintento | Escenario HTTP 500, mensaje `role="alert"`, botón «Reintentar» recupera los datos |
 | 5 | Ruta inexistente | Página 404 |
 
-## Resultados (19-11-2026)
+## Resultados (21-11-2026)
+
+Ejecución en Windows 11 con Chromium 153.0.8010.12, Firefox 155.0 y WebKit 26.6 (`npx playwright test`).
 
 | Proyecto | Resultado | Observación |
 |---|---|---|
-| chromium (Chrome / Edge) | ✅ 5 / 5 | Ejecutado en el entorno de desarrollo |
+| chromium (Chrome / Edge) | ✅ 5 / 5 | |
+| firefox | ✅ 5 / 5 | Motor Gecko |
+| webkit (Safari) | ✅ 5 / 5 | Motor de Safari |
 | movil-chromium (Pixel 7) | ✅ 5 / 5 | El enlace «Mi viaje» queda dentro del menú hamburguesa; la prueba navega por URL |
-| firefox | ⏳ Pendiente | El entorno de desarrollo no permitió descargar el navegador. Ejecutar localmente: `npx playwright install firefox && npx playwright test --project=firefox` |
-| webkit (Safari) | ⏳ Pendiente | Ídem: `npx playwright install webkit && npx playwright test --project=webkit` |
 
-Salida de la ejecución en Chromium:
+Total: **20 pruebas, 20 aprobadas, 0 fallas** (1,2 min).
 
 ```
-10 passed (24.2s)
+20 passed (1.2m)
   chromium         5/5
+  firefox          5/5
+  webkit           5/5
   movil-chromium   5/5
 ```
+
+### Evidencia
+
+- Salida completa de la ejecución: [`resultado-e2e.txt`](resultado-e2e.txt)
+- Reporte HTML de Playwright: [`capturas/14-reporte-playwright.png`](capturas/14-reporte-playwright.png)
+- Misma pantalla (vuelos por GraphQL) en cada motor:
+  [Chromium](capturas/13-chromium-vuelos.png) · [Firefox](capturas/13-firefox-vuelos.png) · [WebKit](capturas/13-webkit-vuelos.png)
+- Pruebas unitarias (15 aprobadas): [`resultado-unitarias.txt`](resultado-unitarias.txt)
 
 ## Revisión manual sugerida
 

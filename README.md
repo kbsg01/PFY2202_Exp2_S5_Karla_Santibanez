@@ -5,23 +5,22 @@ Los datos vienen de un **backend simulado con MSW**: los destinos se consultan p
 disponibilidad de vuelos y hoteles por **GraphQL** (Apollo Client). La navegación usa **React Router**
 con rutas anidadas y el diseño es responsive con **Tailwind CSS**.
 
-- Autora: Karla Santibáñez Gutiérrez
 - Asignatura: PFY2202 — Desarrollo Fullstack II
-- Sitio publicado: https://kbsg01.github.io/viajes-karla-santigut-PFY2202/ (se publica con `npm run deploy`)
+- Sitio publicado: https://kbsg01.github.io/viajes-PFY2202/ (se publica con `npm run deploy`)
 
 ## Requisitos de la actividad y dónde se cumplen
 
-| Requisito | Implementación |
-|---|---|
-| Interfaz responsive (Tailwind) | `src/index.css`, `tailwind.config.js`; grillas 1/2/3 columnas, menú hamburguesa en móvil (`Navbar.jsx`), capturas en `docs/capturas` |
-| Consumo de API REST | `src/api/` → `GET /api/destinos`, `GET /api/destinos/:id` con `fetch`, timeout, caché y errores tipados |
-| Consumo de API GraphQL | `src/apollo/` → query `OpcionesDeViaje` (vuelos + hoteles en una sola petición) y mutaciones `reservarVuelo` / `reservarHotel` |
-| React Router | `src/App.jsx`: `/`, `/destinos`, `/destinos/:id` con hijas `vuelos` y `hoteles` (`<Outlet>`), `/mi-viaje`, 404 |
-| Componentes modulares | `src/components` (tarjetas, mensajes, carga), `src/pages`, `src/hooks`, `src/context`, `src/utils` |
-| `useState` y `useEffect` | `useConsulta.js` (ciclo de vida de la petición REST), `ViajeContext.jsx` (persistencia en `localStorage`), filtros en `Destinos.jsx`, formulario en `MiViaje.jsx` |
-| Indicadores de carga y manejo de errores | `BarraProgreso` (peticiones REST y GraphQL en curso), `Cargando`, `MensajeError` con «Reintentar» y datos de respaldo |
-| Documentación en GitHub + GitHub Pages | este README, `docs/`, script `deploy` con `gh-pages` |
-| Pruebas cross-browser | `playwright.config.js` (Chromium, Firefox, WebKit y móvil), resultados en `docs/pruebas-cross-browser.md` |
+| Requisito                                | Implementación                                                                                                                                                              |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Interfaz responsive (Tailwind)           | `src/index.css`, `tailwind.config.js`; grillas 1/2/3 columnas, menú hamburguesa en móvil (`Navbar.jsx`), capturas en `docs/capturas`                               |
+| Consumo de API REST                      | `src/api/` → `GET /api/destinos`, `GET /api/destinos/:id` con `fetch`, timeout, caché y errores tipados                                                            |
+| Consumo de API GraphQL                   | `src/apollo/` → query `OpcionesDeViaje` (vuelos + hoteles en una sola petición) y mutaciones `reservarVuelo` / `reservarHotel`                                     |
+| React Router                             | `src/App.jsx`: `/`, `/destinos`, `/destinos/:id` con hijas `vuelos` y `hoteles` (`<Outlet>`), `/mi-viaje`, 404                                               |
+| Componentes modulares                    | `src/components` (tarjetas, mensajes, carga), `src/pages`, `src/hooks`, `src/context`, `src/utils`                                                                 |
+| `useState` y `useEffect`             | `useConsulta.js` (ciclo de vida de la petición REST), `ViajeContext.jsx` (persistencia en `localStorage`), filtros en `Destinos.jsx`, formulario en `MiViaje.jsx` |
+| Indicadores de carga y manejo de errores | `BarraProgreso` (peticiones REST y GraphQL en curso), `Cargando`, `MensajeError` con «Reintentar» y datos de respaldo                                                |
+| Documentación en GitHub + GitHub Pages  | este README, `docs/`, script `deploy` con `gh-pages`                                                                                                                   |
+| Pruebas cross-browser                    | `playwright.config.js` (Chromium, Firefox, WebKit y móvil), resultados en `docs/pruebas-cross-browser.md`                                                               |
 
 ## Arquitectura
 
@@ -57,10 +56,10 @@ sola.
 
 ### REST
 
-| Método | Ruta | Respuesta |
-|---|---|---|
-| GET | `/api/destinos` | Lista resumida de destinos (`?region=` opcional) |
-| GET | `/api/destinos/:id` | Ficha completa; `404` si no existe |
+| Método | Ruta                  | Respuesta                                          |
+| ------- | --------------------- | -------------------------------------------------- |
+| GET     | `/api/destinos`     | Lista resumida de destinos (`?region=` opcional) |
+| GET     | `/api/destinos/:id` | Ficha completa; `404` si no existe               |
 
 ### GraphQL (`POST /graphql`)
 
@@ -129,10 +128,32 @@ Luego, en GitHub → *Settings → Pages*, elegir la rama `gh-pages` como origen
 
 Resultados y matriz de compatibilidad: [`docs/pruebas-cross-browser.md`](docs/pruebas-cross-browser.md).
 
+| Prueba                                           | Resultado | Evidencia                                                       |
+| ------------------------------------------------ | --------- | --------------------------------------------------------------- |
+| Unitarias (`npm test`)                         | 15 / 15   | [`docs/resultado-unitarias.txt`](docs/resultado-unitarias.txt) |
+| End-to-end en Chromium, Firefox, WebKit y móvil | 20 / 20   | [`docs/resultado-e2e.txt`](docs/resultado-e2e.txt)             |
+
 ## Capturas
 
-| Escritorio | Móvil |
-|---|---|
+| Escritorio                                                 | Móvil                                                     |
+| ---------------------------------------------------------- | ---------------------------------------------------------- |
 | ![Vuelos por GraphQL](docs/capturas/03-vuelos-graphql.png) | ![Destinos en móvil](docs/capturas/10-movil-destinos.png) |
-| ![Mi viaje](docs/capturas/05-mi-viaje.png) | ![Menú móvil](docs/capturas/11-movil-menu.png) |
-| ![Error GraphQL](docs/capturas/08-error-graphql.png) | ![Vuelos en móvil](docs/capturas/12-movil-vuelos.png) |
+| ![Mi viaje](docs/capturas/05-mi-viaje.png)                 | ![Menú móvil](docs/capturas/11-movil-menu.png)           |
+| ![Error GraphQL](docs/capturas/08-error-graphql.png)       | ![Vuelos en móvil](docs/capturas/12-movil-vuelos.png)     |
+
+### Pruebas cross-browser
+
+| Chromium                                                                                           | Firefox                                                                                          | WebKit                                                                                         |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| 
+<img alt="Vuelos en Chromium" src="docs/capturas/13-chromium-vuelos.png" width="349" height="218">
+
+ | 
+<img alt="Vuelos en Firefox" src="docs/capturas/13-firefox-vuelos.png" width="414" height="259">
+
+ | 
+<img alt="Vuelos en WebKit" src="docs/capturas/13-webkit-vuelos.png" width="434" height="271">
+
+ |
+
+![Reporte de Playwright: 20 pruebas aprobadas](docs/capturas/14-reporte-playwright.png)

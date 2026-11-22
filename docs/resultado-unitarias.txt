@@ -1,0 +1,25 @@
+Pruebas unitarias (node:test) - 22-11-2026, Windows 11, Node v26.12.1
+
+✔ un dato vigente no vuelve a consultarse (1.1433ms)
+✔ peticiones simultáneas a la misma clave comparten una sola consulta (19.8728ms)
+✔ un dato vencido se vuelve a consultar (0.5115ms)
+✔ forzar ignora la caché vigente (0.3689ms)
+✔ si la consulta falla, se conserva el dato anterior como respaldo (1.287ms)
+✔ la consulta devuelve vuelos ordenados por precio y hoteles filtrados (8.6069ms)
+✔ un vuelo sin asientos se informa como no disponible (1.5249ms)
+✔ un destino inexistente produce un error GraphQL (1.5853ms)
+✔ reservar descuenta cupos y rechaza más asientos de los disponibles (1.1588ms)
+✔ se necesita una habitación doble por cada dos pasajeros (1.5967ms)
+✔ el total suma vuelo por pasajero y hotel por noche y habitación (0.1879ms)
+✔ un plan sin vuelo ni hotel no es válido (0.5868ms)
+✔ se informan cupos insuficientes de vuelo y hotel (0.3516ms)
+✔ limitarEntero acota valores y descarta texto (0.1359ms)
+✔ esIdValido rechaza ids con caracteres peligrosos (0.1808ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1055.4747
