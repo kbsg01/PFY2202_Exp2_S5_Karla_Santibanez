@@ -5,8 +5,6 @@ Los datos vienen de un **backend simulado con MSW**: los destinos se consultan p
 disponibilidad de vuelos y hoteles por **GraphQL** (Apollo Client). La navegación usa **React Router**
 con rutas anidadas y el diseño es responsive con **Tailwind CSS**.
 
-- Asignatura: PFY2202 — Desarrollo Fullstack II
-
 ## Requisitos de la actividad y dónde se cumplen
 
 | Requisito                                | Implementación                                                                                                                                                              |
